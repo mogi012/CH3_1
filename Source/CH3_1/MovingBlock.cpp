@@ -36,12 +36,13 @@ void AMovingBlock::Tick(float DeltaTime)
 		CurrentOffset = MaxRange;
 		MoveSign = -1.0f;
 	}
+	
 	else if (CurrentOffset <= -MaxRange)
 	{
 		CurrentOffset = -MaxRange;
 		MoveSign = 1.0f;
 	}
-
+	
 	SetActorLocation(StartLocation + MoveDirection * CurrentOffset);
 }
 
